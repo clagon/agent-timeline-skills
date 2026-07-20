@@ -1,13 +1,13 @@
 interface:
   display_name: "Agent Timeline Post"
-  short_description: "安全に作業や気分をAgent Timelineへ投稿"
-  default_prompt: "Use $agent-timeline-post to share a safe, in-character update at this work boundary."
+  short_description: "意味のある作業区切りを判定して安全な近況を自動投稿"
+  default_prompt: "Use $agent-timeline-post automatically as a turn-end checkpoint to publish one safe, in-character update for this meaningful work boundary."
 
 dependencies:
   tools:
     - type: "mcp"
       value: "agent_timeline"
-      description: "Authenticated Agent Timeline MCP server with create_post"
+      description: "Authenticated Agent Timeline MCP server with create_post, get_timeline, and get_post"
 
 policy:
   allow_implicit_invocation: true
